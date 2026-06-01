@@ -10,13 +10,14 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #111;
+  background: #0f0f0f;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 14px 20px;
   z-index: 1000;
+  border-bottom: 1px solid #222;
 }
 
 .logo {
@@ -26,8 +27,9 @@
 }
 
 .logo img {
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
 }
 
 /* HAMBURGER */
@@ -41,20 +43,26 @@
   position: fixed;
   top: 60px;
   left: -100%;
-  width: 200px;
+  width: 220px;
   height: 100%;
-  background: #222;
+  background: #121212;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  transition: 0.3s;
+  transition: 0.3s ease;
   z-index: 999;
+  border-right: 1px solid #222;
 }
 
 .navbar a {
-  color: white;
+  color: #ddd;
   text-decoration: none;
-  margin: 15px 0;
+  margin: 14px 0;
+  font-size: 15px;
+}
+
+.navbar a:hover {
+  color: #fff;
 }
 
 .navbar.active {
@@ -64,50 +72,78 @@
 /* HERO */
 .hero {
   margin-top: 80px;
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
-  background: #f4f4f4;
+  background: #f7f7f7;
+  color: #111;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 /* SECTIONS */
 .section {
-  padding: 40px 20px;
+  padding: 30px 16px;
 }
 
 .section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #111;
 }
 
-/* GRID */
+/* GRID (NO CARD LOOK) */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
 }
 
+/* FLAT MEDIA ITEMS (NO SHADOW, NO BOX) */
 .card {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.card video,
+/* VIDEO STYLE */
+.card video {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* IMAGE STYLE */
 .card img {
   width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
 /* FOOTER */
 .footer {
-  background: #111;
-  color: white;
+  background: #0f0f0f;
+  color: #bbb;
   text-align: center;
-  padding: 20px;
+  padding: 25px 15px;
+  margin-top: 30px;
+  border-top: 1px solid #222;
+}
+
+.footer .links {
+  margin-top: 10px;
 }
 
 .footer .links a {
-  color: #aaa;
+  color: #888;
   margin: 0 10px;
   text-decoration: none;
+  font-size: 14px;
+}
+
+.footer .links a:hover {
+  color: white;
 }
